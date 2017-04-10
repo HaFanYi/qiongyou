@@ -72,6 +72,18 @@
             make.centerY.equalTo(self.coverImageV);
             make.height.equalTo(@20);
         }];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+        view.userInteractionEnabled = YES;
+        self.titleLabel.userInteractionEnabled = YES;
+        self.city_nameLabel.userInteractionEnabled = YES;
+        [view addGestureRecognizer:tap];
+        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+        [self.titleLabel addGestureRecognizer:tap1];
+        UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+        [self.city_nameLabel addGestureRecognizer:tap2];
+        view.tag = model.city_id;
+        self.titleLabel.tag = model.city_id;
+        self.city_nameLabel.tag = model.city_id;
         
         self.playIconImageV = [[UIImageView alloc]init];
         self.playIconImageV.userInteractionEnabled = YES;
@@ -157,28 +169,53 @@
             if ([dic[@"icon_type"]  isEqualToString: @"play"]) {
                 [self.playIconImageV sd_setImageWithURL:[NSURL URLWithString:dic[@"icon_url"]] placeholderImage:[UIImage imageNamed:@"LeePlaceholder.png"]];
                 self.playLabel.text = [NSString stringWithFormat:@"%@",dic[@"name"]];
+                self.playLabel.userInteractionEnabled = YES;
+                self.playIconImageV.userInteractionEnabled = YES;
+                self.playLabel.tag = 001;
+                self.playIconImageV.tag = 001;
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                [self.playIconImageV addGestureRecognizer:tap];
+                [self.playLabel addGestureRecognizer:tap1];
             }else if ([dic[@"icon_type"] isEqualToString:@"food"]) {
                 [self.foodIconImageV sd_setImageWithURL:[NSURL URLWithString:dic[@"icon_url"]] placeholderImage:[UIImage imageNamed:@"LeePlaceholder.png"]];
                 self.foodLabel.text = [NSString stringWithFormat:@"%@",dic[@"name"]];
+                self.foodLabel.userInteractionEnabled = YES;
+                self.foodIconImageV.userInteractionEnabled = YES;
+                self.foodLabel.tag = 002;
+                self.foodIconImageV.tag = 002;
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                [self.foodIconImageV addGestureRecognizer:tap];
+                [self.foodLabel addGestureRecognizer:tap1];
             }else if ([dic[@"icon_type"] isEqualToString:@"qyerguide"]) {
                 [self.qyerguideIconImageV sd_setImageWithURL:[NSURL URLWithString:dic[@"icon_url"]] placeholderImage:[UIImage imageNamed:@"LeePlaceholder.png"]];
                 self.qyerguideLabel.text = [NSString stringWithFormat:@"%@",dic[@"name"]];
+                self.qyerguideLabel.userInteractionEnabled = YES;
+                self.qyerguideIconImageV.userInteractionEnabled = YES;
+                self.qyerguideIconImageV.tag = 003;
+                self.qyerguideLabel.tag = 003;
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                [self.qyerguideLabel addGestureRecognizer:tap];
+                [self.qyerguideIconImageV addGestureRecognizer:tap1];
             }else if ([dic[@"icon_type"] isEqualToString:@"poilike"]) {
                 [self.poilikeIconImageV sd_setImageWithURL:[NSURL URLWithString:dic[@"icon_url"]] placeholderImage:[UIImage imageNamed:@"LeePlaceholder.png"]];
                 self.poilikeLabel.text = [NSString stringWithFormat:@"%@",dic[@"name"]];
+                self.poilikeLabel.userInteractionEnabled = YES;
+                self.poilikeIconImageV.userInteractionEnabled = YES;
+                self.poilikeIconImageV.tag = 004;
+                self.poilikeLabel.tag = 004;
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoCityPage:)];
+                [self.poilikeLabel addGestureRecognizer:tap];
+                [self.poilikeIconImageV addGestureRecognizer:tap1];
             }
         }
-//        self.playLabel.backgroundColor = [UIColor redColor];
-//        self.playIconImageV.backgroundColor = [UIColor greenColor];
-//        self.foodLabel.backgroundColor = [UIColor greenColor];
-//        self.foodIconImageV.backgroundColor = [UIColor greenColor];
-//        self.qyerguideLabel.backgroundColor = [UIColor yellowColor];
-//        self.qyerguideIconImageV.backgroundColor = [UIColor purpleColor];
-//        self.poilikeLabel.backgroundColor = [UIColor grayColor];
-//        self.poilikeIconImageV.backgroundColor = [UIColor redColor];
+
         UILabel *moreLabel = [[UILabel alloc]init];
         moreLabel.text = @"更多城市";
-        moreLabel.textColor = BorderColor;
+        moreLabel.textColor = [UIColor grayColor];
         moreLabel.textAlignment = NSTextAlignmentCenter;
         moreLabel.font = [UIFont systemFontOfSize:10.0];
         [self addSubview:moreLabel];
@@ -205,12 +242,55 @@
             make.left.equalTo(moreLabel.mas_right).with.offset(0);
             make.height.equalTo(@1);
         }];
-    
+        NSArray *cityArr = model.recommend_city;
+        for (int i = 0; i < cityArr.count; i++) {
+        UIButton *btn = [[UIButton alloc]init];
+        [self addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).with.offset(18+i*((self.frame.size.width-80)/3+23));
+            make.bottom.equalTo(self).with.offset(-15);
+            make.size.mas_equalTo(CGSizeMake((self.frame.size.width-80)/3, 28));
+        }];
+            NSDictionary *dic = cityArr[i];
+            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            btn.titleLabel.font = [UIFont systemFontOfSize:11];
+            btn.contentHorizontalAlignment=UIControlContentHorizontalAlignmentCenter;
+            [btn setTitle:dic[@"city_name"] forState:UIControlStateNormal];
+            btn.layer.masksToBounds = YES;
+            btn.layer.cornerRadius = 14;
+            btn.layer.borderWidth = 1;
+            btn.layer.borderColor = [UIColor greenColor].CGColor;
+            btn.tag = [dic[@"id"] integerValue];
+            [btn addTarget:self action:@selector(goCityPage:) forControlEvents:UIControlEventTouchUpInside];
     }
+  }
     return self;
 }
 
-
+#pragma mark -点击最近访问cover
+- (void)gotoCityPage:(UITapGestureRecognizer *)tap{
+    switch (tap.view.tag) {
+        case 001:
+            NSLog(@"点击类型是:play");
+            break;
+        case 002:
+            NSLog(@"点击类型是:food");
+            break;
+        case 003:
+            NSLog(@"点击类型是:qyerguide");
+            break;
+        case 004:
+            NSLog(@"点击类型是:poilike");
+            break;
+        default:
+            NSLog(@"点击跳转的城市ID是：%ld", tap.view.tag);
+            break;
+    }
+}
+#pragma mark -更多城市点击跳转
+- (void)goCityPage:(UIButton *)sender {
+    NSLog(@"点击城市的ID是：%ld",sender.tag);
+}
 - (UIImage *)blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur
 {
     if (!image) {

@@ -48,7 +48,7 @@
 
     [LastestVisitModel city_id:66 globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
         if (!error) {
-            VisitHistoryView *historyView = [[VisitHistoryView alloc]initWithFrame:CGRectMake(10, 260, kScreenW-20, 250) data:posts];
+            VisitHistoryView *historyView = [[VisitHistoryView alloc]initWithFrame:CGRectMake(10, 260, kScreenW-20, 245) data:posts];
             [self.tableView addSubview:historyView];
         }
         [self.tableView reloadData];
