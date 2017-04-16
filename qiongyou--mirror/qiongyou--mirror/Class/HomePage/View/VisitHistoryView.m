@@ -259,7 +259,7 @@
             btn.layer.masksToBounds = YES;
             btn.layer.cornerRadius = 14;
             btn.layer.borderWidth = 1;
-            btn.layer.borderColor = [UIColor greenColor].CGColor;
+            btn.layer.borderColor = BaseColor.CGColor;
             btn.tag = [dic[@"id"] integerValue];
             [btn addTarget:self action:@selector(goCityPage:) forControlEvents:UIControlEventTouchUpInside];
     }

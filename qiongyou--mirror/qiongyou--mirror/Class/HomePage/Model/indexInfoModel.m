@@ -29,8 +29,9 @@
     return self;
 }
 
-+ (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block {
-    NSString *url = [NSString stringWithFormat:@"%s%s",prefix_url,home_feed];
++ (NSURLSessionDataTask *)globalTimelinePostsWithPage:(NSUInteger)page Block:(void (^)(NSArray *posts, NSError *error))block {
+    NSString *home = [NSString stringWithFormat:@"home_feed?client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=10&page=%ld",page];
+    NSString *url = [NSString stringWithFormat:@"%s%@",prefix_url,home];
     return [[HttpsRequest  shareManager] POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (block) {
             NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:0];

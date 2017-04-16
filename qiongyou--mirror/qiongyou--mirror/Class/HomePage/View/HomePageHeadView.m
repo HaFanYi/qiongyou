@@ -41,7 +41,7 @@
         self.searchLabel.layer.masksToBounds = YES;
         self.searchLabel.layer.borderWidth = 0.7;
         self.searchLabel.layer.cornerRadius = 5;
-        self.searchLabel.layer.borderColor = [UIColor greenColor].CGColor;
+        self.searchLabel.layer.borderColor = BaseColor.CGColor;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(search:)];
         [self.searchLabel addGestureRecognizer:tap];
         self.searchLabel.userInteractionEnabled = YES;
@@ -50,7 +50,7 @@
         self.searchLabel.font = [UIFont systemFontOfSize:14];
         [self.searchLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
-            make.bottom.equalTo(self).with.offset(-10);
+            make.top.equalTo(self.leeScrollV.mas_bottom).with.offset(10);
             make.size.mas_equalTo(CGSizeMake(self.frame.size.width-20, 30));
         }];
     }

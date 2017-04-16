@@ -15,7 +15,6 @@
 #import "DIYTool.h"
 #import "Mantle.h"
 #import "HttpsRequest.h"
-#import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
 #import "SDWebImageManager.h"
 #import "SDImageCache.h"

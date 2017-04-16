@@ -14,11 +14,6 @@
 @property (nonatomic, strong)Comment *comment;
 
 /**
- *页数
- */
-@property (nonatomic)NSUInteger page;
-
-/**
  *id
  */
 @property (nonatomic)NSUInteger id;
@@ -68,5 +63,5 @@
  */
 @property (nonatomic, strong)NSString *icon_url;
 
-+ (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block;
++ (NSURLSessionDataTask *)globalTimelinePostsWithPage:(NSUInteger)page Block:(void (^)(NSArray *posts, NSError *error))block ;
 @end
