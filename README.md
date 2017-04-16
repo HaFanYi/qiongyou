@@ -4,3 +4,6 @@
 2017-04-08 框架搭建，首页推荐头部滚动视图完成。	
 
 2017-04-09 最近访问功能完成。
+
+2017-04-16 首页推荐UI终于完成。
+![Image text](https://github.com/watchmanLee/qiongyou/qiongyou--mirror/qiongyou--mirror/Resource/屏幕快照2017-04-16下午7.42.48.png）
