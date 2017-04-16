@@ -122,8 +122,8 @@
 		5B75AA011E98B9E500DA7D83 /* indexInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B75A9FD1E98B9E500DA7D83 /* indexInfoModel.m */; };
 		5B75AA021E98B9E500DA7D83 /* SildeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B75A9FF1E98B9E500DA7D83 /* SildeModel.m */; };
 		5B75AA091E98CC4500DA7D83 /* HomePageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B75AA081E98CC4500DA7D83 /* HomePageHeadView.m */; };
-		5B912C651EA391F8006F0501 /* 屏幕快照 2017-04-16 下午7.43.24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B912C641EA391F8006F0501 /* 屏幕快照 2017-04-16 下午7.43.24.png */; };
-		5B912C671EA391FF006F0501 /* 屏幕快照 2017-04-16 下午7.42.48.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B912C661EA391FF006F0501 /* 屏幕快照 2017-04-16 下午7.42.48.png */; };
+		5B912C651EA391F8006F0501 /* index1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B912C641EA391F8006F0501 /* index1.png */; };
+		5B912C671EA391FF006F0501 /* index2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B912C661EA391FF006F0501 /* index2.png */; };
 		5BD122031E9A4E8A00D7A840 /* LastestVisitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD122021E9A4E8A00D7A840 /* LastestVisitModel.m */; };
 /* End PBXBuildFile section */
 
@@ -383,8 +383,8 @@
 		5B75A9FF1E98B9E500DA7D83 /* SildeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SildeModel.m; sourceTree = "<group>"; };
 		5B75AA071E98CC4500DA7D83 /* HomePageHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeadView.h; sourceTree = "<group>"; };
 		5B75AA081E98CC4500DA7D83 /* HomePageHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeadView.m; sourceTree = "<group>"; };
-		5B912C641EA391F8006F0501 /* 屏幕快照 2017-04-16 下午7.43.24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2017-04-16 下午7.43.24.png"; sourceTree = "<group>"; };
-		5B912C661EA391FF006F0501 /* 屏幕快照 2017-04-16 下午7.42.48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2017-04-16 下午7.42.48.png"; sourceTree = "<group>"; };
+		5B912C641EA391F8006F0501 /* index1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index1.png; sourceTree = "<group>"; };
+		5B912C661EA391FF006F0501 /* index2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index2.png; sourceTree = "<group>"; };
 		5BD122011E9A4E8A00D7A840 /* LastestVisitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastestVisitModel.h; sourceTree = "<group>"; };
 		5BD122021E9A4E8A00D7A840 /* LastestVisitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastestVisitModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -846,8 +846,8 @@
 		5B75A96F1E9883B300DA7D83 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				5B912C641EA391F8006F0501 /* 屏幕快照 2017-04-16 下午7.43.24.png */,
-				5B912C661EA391FF006F0501 /* 屏幕快照 2017-04-16 下午7.42.48.png */,
+				5B912C641EA391F8006F0501 /* index1.png */,
+				5B912C661EA391FF006F0501 /* index2.png */,
 				5B29AF361EA291E2009D4414 /* go.png */,
 				5B2149FF1E99D8C600539E6E /* LeePlaceholder.png */,
 			);
@@ -1054,13 +1054,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B75A8811E9877EA00DA7D83 /* LaunchScreen.storyboard in Resources */,
-				5B912C651EA391F8006F0501 /* 屏幕快照 2017-04-16 下午7.43.24.png in Resources */,
+				5B912C651EA391F8006F0501 /* index1.png in Resources */,
 				5B75A87E1E9877EA00DA7D83 /* Assets.xcassets in Resources */,
 				5B75A9A31E9883B300DA7D83 /* MJRefresh.bundle in Resources */,
 				5B214A001E99D8C600539E6E /* LeePlaceholder.png in Resources */,
 				5B75A9F41E989C7900DA7D83 /* MSAlertController.xib in Resources */,
 				5B75A9F51E989C7900DA7D83 /* MSAlertController_ActionSheet.xib in Resources */,
-				5B912C671EA391FF006F0501 /* 屏幕快照 2017-04-16 下午7.42.48.png in Resources */,
+				5B912C671EA391FF006F0501 /* index2.png in Resources */,
 				5B75A9891E9883B300DA7D83 /* Info.plist in Resources */,
 				5B29AF371EA291E2009D4414 /* go.png in Resources */,
 			);
