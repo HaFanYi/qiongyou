@@ -6,6 +6,6 @@
 2017-04-09 最近访问功能完成。
 
 2017-04-16 首页推荐UI终于完成。
-![Image_text](https://github.com/watchmanLee/qiongyou/qiongyou--mirror/qiongyou--mirror/Resource/index1.png）
+![Image_text](https://github.com/watchmanLee/qiongyou/blob/master/qiongyou--mirror/qiongyou--mirror/Resource/index1.png）
 
-![Image text](https://github.com/watchmanLee/qiongyou/qiongyou--mirror/qiongyou--mirror/Resource/index2.png）
+![Image text](https://github.com/watchmanLee/qiongyou/blob/master/qiongyou--mirror/qiongyou--mirror/Resource/index1.png）
